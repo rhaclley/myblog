@@ -5,21 +5,24 @@ from django.shortcuts import render
 posts = [
     {
         'author': 'Rhaclley',
-        'tittle': 'Post 1',
+        'title': 'Post 1',
         'content': 'First Post Content',
         'date_posted': 'January 10, 2024'
-    }
+    },
     {
-        'author': 'User',
-        'tittle': 'Post 2',
+        'author': 'Rhaclley',
+        'title': 'Post 2',
         'content': 'Second Post Content',
         'date_posted': 'December 10, 2023'
     }
 ]
 
 def home(request):
-    return render(request, 'blog/home.html')
+    context = {
+        'posts': posts
+    }
+    return render(request, 'blog/home.html', context)
 
 def about(request):
-    return render(request, 'blog/about.html')
+    return render(request, 'blog/about.html', {'title': 'About'})
 
