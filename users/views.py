@@ -1,6 +1,7 @@
 from typing import Self
 from django.shortcuts import render, redirect
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
 from .forms import UserRegisterForm
 
@@ -21,3 +22,7 @@ def register(request):
 def logout_view(request):
     logout(request)
     return render(request, 'users/logout.html')
+
+@login_required
+def profile(request):
+    return render(request, 'users/profile.html')
