@@ -141,8 +141,5 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
-EMAIL_USER = 'rhaclleylaut@gmail.com'
-EMAIL_PASS = 'ehsq alcc bvps iira'
-
-EMAIL_HOST_USER = os.environ.get(EMAIL_USER)
-EMAIL_HOST_PASSWORD = os.environ.get(EMAIL_PASS)
+EMAIL_HOST_USER = 'rhaclleylaut@gmail.com'
+EMAIL_HOST_PASSWORD = 'ehsq alcc bvps iira'
